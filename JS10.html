@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     /*   let programmingLanguages = `Мови програмування:
+ * JavaScript
+ * Python
+ * Go
+`;
+alert(programmingLanguages);
+let programmingLanguages =`Мови програмування: \n * JavaScript \n * Python\n * Go`;
+alert(programmingLanguages);
+let programmingLanguages = `Мови програмування:
+ \u058D JavaScript
+ \u058D Python
+ \u058D Go
+`;
+alert(programmingLanguages);
+let str = "у дворі трава на траві дрова";
+alert( str.indexOf("трав") ); // 8
+alert( str.indexOf("у") ); // 0, тому, що "у" зустрінеться на самому початку рядка
+alert( str.indexOf("трав", 9) ); // 17, і ми знайдемо "трав" ще раз
+let str = "у дворі трава на траві дрова";
+alert(str.substring(2,6) ); // «двор»
+alert(str.substr(2,6)); // «дворі »
+alert(str.slice(2,-6)); // «дворі трава на траві»
+let name ='superman';
+alert(name.charAt(0));
+alert(name[5])
+let str = "Україна"; 
+if (~str.indexOf("країна")) { 
+alert("співпадіння є!"); 
+}
+let str = 'беруть бобри в сирі бобри. бобри хоробрі, а для бобрят добрі';
+let target ='ри';
+let position = 0;
+while (true){
+    let searchPos = str.indexOf(target, position);
+    if (searchPos == -1) break;
+    alert('знайшли «ри» тут:'+ searchPos);
+    position = searchPos + 1
+} let str = prompt('ведить текст, якщо там є слова безкоштовно або гарантія, я напишу вам про ймовірність спаму');
+if (~str.indexOf("безкоштовно")||~str.indexOf("гарантія")){
+    alert('це спам!');
+} else {
+    alert('не спам')
+}*/
+let str = prompt ('ведить рядок');
+let first = str.charAt(0).toUpperCase();
+document.write(first + str.slice(1))
+    </script>
+</body>
+</html>
