@@ -61,23 +61,21 @@ for (let i = 0; i < 5; i++) {
 
 console.log(randomColors);
 
-let comp =['cool', 'clever', 'pretty', 'funny', 'cute', 'cheerful', 'awesome', 'amazing', 'increbible']
-let any =['pig', 'bat', 'my mother', 'lion', 'cat', 'cheerful', 'awesome', 'amazing',  'increbible' ]
- let col =['grey', 'blue', 'green', 'gold', 'red']
- let m
-let i1 = +prompt('number pl', 10)
-
-for (let i = 0; i < i1; i++){
-    m = Math.floor (Math.random ()*comp.lenght)
-    m1 = Math.floor (Math.random ()*any.lenght)
-    m2 = Math.floor (Math.random ()*col.lenght)
-    document.writeln (`${i + 1}`+') you so '+comp[m] +'as'+ any[m1] + '<br>');
-
-}*/
-
 let alf = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','Y','U','V','W','X','Y']
 let a =prompt('Letter', 'A');
 alert(alf.indexOf(a)+1)
+*/
+
+
+let number = +prompt('how many compliments do you ne','10')
+let compliments=['cool', 'clever', 'pretty', 'funny', 'cute', 'cheerful', 'awesome', 'amazing', 'increbible']
+let ran
+let i
+for(i =1; i <= number; i++){
+    ran = Math.floor (Math.random ()*compliments.length)
+    document.writeln (`${i}) ${compliments [ran]} <br>`)
+}
+
     </script>
 </body>
 </html>
