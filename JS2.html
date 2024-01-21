@@ -10,7 +10,7 @@
         /*let user, name;
         name="В'ячеслав'";
         user=name;
-        alert(user);*/
+        alert(user);
         let book;
         let door;
         book="Земля";
@@ -50,17 +50,26 @@ let x=6;
 let P=(s+x)*2;
 let S=s*x;
 alert(P);
-alert(S);*/
+alert(S);
+*/
 
-
-let name=prompt("what is side a?");
-document.writeln(name);
-let a= +prompt("what yuor num?");
-let b= +prompt("what yuor num?");
-let P= a*2 + b*b;
-let S= a*b; 
-alert (`${a} i ${b} буде: ${P}`);
-alert (`${a} i ${b} буде: ${S}`);
+let login = prompt('Ведить логін','')
+if (login =='user'){
+    let password = prompt ('Ведіть пароль: ')
+    if (password ==null){
+        alert ('Вхід скасовано')
+    } else if (password == 'password'){
+        alert('Ласкаво просимо')
+    } 
+    else {
+        alert ('Пароль не вірний')
+    }
+}
+else if (login == null) {
+    alert ('Вхід скасовано') ;
+} else{
+    alert ('Користувач не визначений');
+}
 
 
 
