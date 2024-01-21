@@ -14,12 +14,12 @@
 </head>
 <body>
     <script>
-        alert("Hello world");
+        /*alert("Hello world");
          alert("Привіт світ");
         [5,8,3].forEach(alert);
         alert(23+6)
         document.writeln("hello world")//комент
-        /*много коемнт*/
+        /*много коемнт
         let text ='hello, world', number=33;
         text = 'world vvvv';
         document.writeln(number)
@@ -31,7 +31,19 @@
         alert(return1)
         let name=prompt("hi","olga")
         document.writeln(name)
-       alert("gg")
+       alert("gg")*/
+      
+       let money = +prompt('Яку суму хочете зняти','');
+if (money < 50 || money > 3000) {
+  alert( 'На жаль, Ви  можете зняти гроші на суму від 50 грн. до 3000 грн.');
+}
+
+else if (money % 50==0) {
+    alert(`заберить вашу суму ${money} грн`)
+}
+else {
+  alert (' сума не кратна 50')
+}
     </script>
 </body>
 </html>
