@@ -42,10 +42,7 @@ do {
 for (let count  = 0; count < 4; count++){
   document.writeln(count);
 }
-let hi = +prompt("скільки ти хочеш привітань?","")
-for (let count  = 1; count < hi; count++){
-  document.writeln(hi+")"+"Україна"+"<br>");}
-  document.writeln("glory "+hi+" times")
+
   
  let min = +prompt('ведить минемальне число',"0")
  let max = +prompt('ведить максимальне число',"100")
@@ -60,7 +57,7 @@ for (let count  = 1; count < hi; count++){
     
     sum=sum+i;
  }
-document.write(`сума чисел в діапазоні від ${min} до ${max} буде ${sum}`)*/
+document.write(`сума чисел в діапазоні від ${min} до ${max} буде ${sum}`)
 
 let min = +prompt('ведить минемальне число',"0")
  let max = +prompt('ведить максимальне число',"100")
@@ -68,8 +65,15 @@ let min = +prompt('ведить минемальне число',"0")
  for(let i=min;i<=max; i++ ){
     
  document.write(`&#${i};`)   
- }
+ }*/
 
+
+ let factorial=1
+let n=+prompt("n",'')
+for(i=1;i<=n;i++){
+    factorial=factorial*i
+}
+alert(factorial)
 
   </script>  
 </body>
