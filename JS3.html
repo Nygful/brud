@@ -124,23 +124,19 @@ document.write(`Перший корінь ${X1}`)
 document.write(`другий корінь ${X1}`)
 if (d < 0)
 document.write("Нема коренів")*/
-let login = prompt('Ведить логин','')
-if (login =='user'){
-    let password = prompt ('Ведіть пароль: ')
-    if (password ==null){
-        alert ('Вхід скасовано')
-    } else if (password == 'password'){
-        alert('Ласкаво просимо')
-    } 
-    else {
-        alert ('Пароль не вірний')
-    }
+let name = prompt('Как звать главного героя в мультике Спанч Боб?', '');
+if (name==null){
+    alert('до побачення')
 }
-else if (login == null) {
-    alert ('Вхід скасовано') ;
-} else{
-    alert ('Користувач не визначений');
+
+else if(name=='Спанч Боб') {
+ alert( 'Так, Ваша відповідь правильна!' );
 }
+
+
+else{
+    alert('не правильно. Його звуть Спанч Боб')
+};
 
 
 
