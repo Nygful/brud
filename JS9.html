@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
     <script>
@@ -28,12 +33,41 @@ if((x>0&&x<1)&&(y>0&&y<1)){
     alert((x+y).toFixed(2));
 } else{
     alert ('ведить число з вказаного діапазону')
-}*/
+}
 let min=+prompt('min?',0);
 let max=+prompt('max?',100);
 for(let i=0;i<1000;i++){
     document.writeln(Math.floor(min+Math.random()*(max+1-min)))
+}*/
+
+let n = +prompt ('Ведіть номер числа з ряду фібоначі',)
+let f = 0
+let sum = 1
+if (n < 0){
+    alert ('Було ведено число меньше за 0')
+
+} else if (n == 0){
+    alert ('0 елемент ряду фібоначі становить 0. <br>')
 }
+else if (n == 1){
+    document.writeln('1 елемент ряду фібоначі становить 1. <br>')
+}
+else if(n >1){
+    let i = 1
+    for (i; n != i; i++){
+        let tmp = sum
+        sum = sum + f
+        f = tmp
+    }
+    document.writeln(`${n} елемент ряду фібоначі становить ${sum}`)
+}
+
+
+
+
+
+
+
     </script>
 </body>
 </html>
