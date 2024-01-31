@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/JS19.css">
+</head>
+<body>
+    <script>
+        let str = prompt('ведить текст, якщо там є слова безкоштовно або гарантія, я напишу вам про ймовірність спаму');
+if (~str.indexOf("безкоштовно")||~str.indexOf("гарантія")){
+    alert('це спам!');
+} else {
+    alert('не спам')
+}
+    </script>
+</body>
+</html>

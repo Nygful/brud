@@ -1,0 +1,10 @@
+body{
+    min-height: 100vh;
+    width: 100%;
+    background-color: red;
+    background-image: url(https://kartinki.pics/uploads/posts/2022-03/1647353163_1-kartinkin-net-p-risunki-knigi-kartinki-1.png);
+   background-size: contain;
+   background-size: cover;
+   font-family: 'Montserrat', sans-serif;
+    
+}

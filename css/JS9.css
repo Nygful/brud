@@ -1,0 +1,9 @@
+body{
+    min-height: 100vh;
+    width: 100%;
+    background-color: ;
+    background-image: url(https://www.bigtrends.com/wp-content/uploads/2015/12/fibonacci-spiral.png);
+   background-size: contain;
+   background-size: cover;
+  
+}

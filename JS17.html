@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/JS17.css">
+</head>
+<body>
+    <script>
+        let count = prompt('Ведіть кількість привітань',8);
+        let a;
+        let congrats;
+        for(a = 0; a <count; a++){
+            document.writeln(`${a + 1})Слава Україні!`+"<br>");
+        }
+        congrats = count % 100;
+        if (congrats >= 11 && congrats <= 19){
+            congrats ='разів';
+        } else {
+            congrats =count % 10;
+            switch (congrats){
+                case 1:
+                    congrats = 'раз';
+                    break;
+                    case 2:
+                        case 3:
+                            case 4:
+                                congrats = 'рази';
+                                break;
+                                default:
+                                    congrats ='разів';
+                                    break; 
+            }
+        }
+        document.writeln(`Героям слава ${count} ${congrats}!`);
+    </script>
+</body>
+</html>

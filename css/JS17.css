@@ -1,0 +1,10 @@
+body{
+    min-height: 100vh;
+    width: 100%;
+    background-color: ;
+    background-image: url(https://www.lrt.lt/img/2022/02/15/1195153-70514-756x425.jpg);
+   background-size: contain;
+   background-size: cover;
+   text-align: center;
+  
+}

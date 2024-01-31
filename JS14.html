@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    #train {
+      position: relative;
+      cursor: pointer;
+    }
+  </style>
+
+</head>
+<body>
+    <canvas id="myCanvas" width="1000px" height="1000px"></canvas>
+<body>
+  <img id="train" src="train.gif">2
+  <script>
+</script>
+</body>
+
+    <script>
+        let canvas = document.getElementById('my Canvas');
+        let cxt = canvas.getContext("2d");
+let context = canvas.getContext("2d");
+context.beginPath();
+context.moveTo(169, 190);
+context.quadracticCurveTo(280, 10, 308, 159)
+context.lineWidth = 10;
+
+context.strokeStyle = "black";
+context.stroke();
+  /*  let numbers = ["Нуль", "Один", "Два"];
+alert(numbers [0] ); // Нуль
+alert(numbers [1] ); // Один
+alert(numbers [2] ); // Два
+numbers [2] = "не два"; // тепер ["Нуль", "Один", "не два"]
+alert(numbers);
+numbers [3] = "Три"; // тепер ["Нуль", "Один", "не два", "Три"] 
+alert(numbers);
+
+let numbers = ['Нуль','Один','Два'];
+numbers.pop(); // видалили два
+alert(numbers);
+numbers.push('Нове два'); // Додали нове два
+alert(numbers);
+numbers.shift(); // видалили нуль
+alert(numbers);
+numbers.unshift('Новий нуль'); // додали новий нуль
+alert(numbers);
+
+let array2D = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9]
+];
+alert(array2D [1][1])
+let colors =['Жовтий','Синій']
+alert (colors)
+colors.push('Червоний')
+alert (colors)
+colors[colors.lenght-2]='Чорний'
+alert (colors)
+colors.shift()
+alert (colors)
+colors.unshift('Зелений','Помаранжевий')
+alert (colors)
+
+ Generating an array of random colors in JavaScript
+function getRandomColor() {
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
+
+// Creating an array of 5 random colors
+let randomColors = [];
+for (let i = 0; i < 5; i++) {
+    randomColors.push(getRandomColor());
+}
+
+console.log(randomColors);
+
+let alf = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','Y','U','V','W','X','Y']
+let a =prompt('Letter', 'A');
+alert(alf.indexOf(a)+1)
+
+
+
+let number = +prompt('how many compliments do you ne','10')
+let compliments=['cool', 'clever', 'pretty', 'funny', 'cute', 'cheerful', 'awesome', 'amazing', 'increbible']
+let animals = ['fox', 'rar','pig','capybara','duck','bug','eagle','mouse','cow']
+let colors = ['yellow', 'red', 'pink', 'green', 'orange', 'white', 'purple', 'grey', 'clyan' ] 
+let ran
+
+for(i =1; i <= number; i++){
+    ran1 = Math.floor (Math.random ()*colors.length)
+    ran2 = Math.floor (Math.random ()*compliments.length)
+    ran3 = Math.floor (Math.random ()*animals.length)
+    document.writeln (`<p style='colors: ${colors[ran1]}';>${i}) you are so ${compliments[ran2]} as a ${animals[ran3]} <br>`)
+
+}*/
+ /*let count=0;
+while (count < 4) {
+  alert(count);
+  count++;
+}
+let i = 4;
+while (i) { // коли i стане = 0 , значення в дужках стане false і цикл зупиниться  
+alert( i );
+  i--;
+}
+let i = 4;
+while (i) { // коли i стане = 0 , значення в дужках стане false і цикл зупиниться  
+alert( i );
+  i++;
+}
+let i = -4;
+while (i) { // коли i стане = 0 , значення в дужках стане false і цикл зупиниться  
+alert( i );
+  i--;
+}
+let count=0;
+do {
+  alert(count);
+  count++;
+} while (count < 4);
+
+for (let count  = 0; count < 4; count++){
+  document.writeln(count);
+}
+
+  
+ let min = +prompt('ведить минемальне число',"0")
+ let max = +prompt('ведить максимальне число',"100")
+ for(let i=min;i<=max; i++ ){
+    if(i%2==0)
+    document.write(i)
+ }
+ let min = +prompt('ведить минемальне число',"0")
+ let max = +prompt('ведить максимальне число',"100")
+ let sum=0
+ for(let i=min;i<=max; i++ ){
+    
+    sum=sum+i;
+ }
+document.write(`сума чисел в діапазоні від ${min} до ${max} буде ${sum}`)
+
+let min = +prompt('ведить минемальне число',"0")
+ let max = +prompt('ведить максимальне число',"100")
+ 
+ for(let i=min;i<=max; i++ ){
+    
+ document.write(`&#${i};`)   
+ }*/
+
+
+ let factorial=1
+let n=+prompt("n",'')
+for(i=1;i<=n;i++){
+    factorial=factorial*i
+}
+alert(factorial)
+
+
+
+
+
+
+  
+
+
+
+
+train.onclick = function() {
+     let start = Date.now(); // зберегти час початку
+	let timer = setInterval(function() {
+        // обчислити скільки часу пройшло з opts.duration
+        let timePassed = Date.now() - start;
+        train.style.left = timePassed / 5 + 'px';
+        if (timePassed > 2000) clearInterval(timer);
+      }, 20);
+    }
+    let capitalEntries = Object.entries()(capitals);
+        capitalEntries.sort((a,b) => a [0].localeCompare(b[0]));
+        let htmlStringTable1 = '<table><tr><th>Формуматування</th><th>Столиці</th></tr>';
+            for (let entry of capitalEntries){
+                htmlStringTable1 += `<tr><td>`
+            }
+    </script>
+</body>
+</html>

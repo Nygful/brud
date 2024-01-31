@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="myCanvas" width="1000px" height="1000px"></canvas>
+    
+    <canvas id="myCanvas" width="400" height="400"
+    style="border:1px solid #000000;">
+    Your browser does not support the HTML5 canvas tag.</canvas>
+
+   
+   <script>
+ /*  let cxt = document.getElementById("myCanvas");
+    let context = cxt.getContext("2d");
+    
+    cxt.fillStyle ="#ff0000";
+    cxt.fillRect(0, 0, 100, 100); 
+    cxt.setLineDash([15,5]);
+    
+    
+    cxt.fillStyle ="#00ff00";
+    cxt.fillRect(40, 40, 100, 100); 
+
+   
+    cxt.fillStyle ="#0000FF";
+    cxt.fillRect(80, 80, 100, 100); 
+
+    context.setLinedash([2,5]);
+   context.strokeStyle ='green';
+  context.lineWidth = 2;
+   context.strokeRect(10, 10, 50, 50);
+
+   let canvas = document.getElementById("myCanvas"), 
+                cxt = canvas.getContext("2d");
+            cxt.strokeStyle = "red";
+            cxt.setLineDash([15,5]);
+            cxt.strokeRect(40, 40, 100, 100);
+            cxt.strokeStyle = "blue";
+            cxt.setLineDash([2,5,6]);
+            cxt.strokeRect(180, 40, 100, 100);
+            cxt.strokeStyle = "green";
+            cxt.setLineDash([2,2]);
+            cxt.strokeRect(320, 40, 100, 100);
+
+            
+
+            cxt.beginPath();                           
+cxt.moveTo(50, 50);                        
+cxt.lineTo(500, 50);                       
+cxt.lineWidth = 15;        
+cxt.strokeStyle = "#ff0000";  
+cxt.lineCap = "butt";                      
+cxt.stroke(); 
+
+cxt.beginPath();                           
+cxt.moveTo(50, 100);                       
+cxt.lineTo(500, 100);                      
+cxt.lineWidth = 15;                        
+cxt.strokeStyle = "#00ff00";               
+cxt.lineCap = "round";  
+                   
+cxt.stroke();    
+cxt.beginPath();                           
+cxt.moveTo(50, 150);                       
+cxt.lineTo(500, 150);                      
+cxt.lineWidth = 15;                        
+cxt.strokeStyle = "#0000ff";               
+cxt.lineCap = "square";                    
+cxt.stroke();
+let canvasm= document.getElementById('myCanvas')
+
+            let cxt = canvasm.getContext('2d')
+cxt.beginPath();
+cxt.moveTo(70,250); 
+cxt.lineTo(250,100); 
+cxt.lineTo(250,400); 
+cxt.fillStyle="red";
+cxt.fill();
+
+let c = document.getElementById("myCanvas");
+
+let cxt = c.getContext("2d");
+
+let x = c.width / 2;
+let y = c.height / 2;
+let radius = 75;
+let startAngle = 0;
+let endAngle = 2 * Math.PI;
+let counterClockwise = false;
+cxt.beginPath();
+cxt.arc(x, y, radius, startAngle, endAngle, counterClockwise);
+cxt.lineWidth = 15;
+
+cxt.strokeStyle = "red"*/
+
+   let c = document.getElementById('myCanvas');
+   let cxt = c.getContext("2d");
+   cxt.fillRect(0, 0, 400, 400)
+
+   for(let y = 0; y < 8; y++){
+    for (let x = 0; x < 8; x++){
+        if ((y+x) % 2 != 0){
+            cxt.clearRect(50 * x , 50 * y , 50, 50)
+        }
+    }
+   }
+
+
+    /*   let programmingLanguages = `Мови програмування:
+ * JavaScript
+ * Python
+ * Go
+`;
+alert(programmingLanguages);
+let programmingLanguages =`Мови програмування: \n * JavaScript \n * Python\n * Go`;
+alert(programmingLanguages);
+let programmingLanguages = `Мови програмування:
+ \u058D JavaScript
+ \u058D Python
+ \u058D Go
+`;
+alert(programmingLanguages);
+let str = "у дворі трава на траві дрова";
+alert( str.indexOf("трав") ); // 8
+alert( str.indexOf("у") ); // 0, тому, що "у" зустрінеться на самому початку рядка
+alert( str.indexOf("трав", 9) ); // 17, і ми знайдемо "трав" ще раз
+let str = "у дворі трава на траві дрова";
+alert(str.substring(2,6) ); // «двор»
+alert(str.substr(2,6)); // «дворі »
+alert(str.slice(2,-6)); // «дворі трава на траві»
+let name ='superman';
+alert(name.charAt(0));
+alert(name[5])
+let str = "Україна"; 
+if (~str.indexOf("країна")) { 
+alert("співпадіння є!"); 
+}
+let str = 'беруть бобри в сирі бобри. бобри хоробрі, а для бобрят добрі';
+let target ='ри';
+let position = 0;
+while (true){
+    let searchPos = str.indexOf(target, position);
+    if (searchPos == -1) break;
+    alert('знайшли «ри» тут:'+ searchPos);
+    position = searchPos + 1
+} let str = prompt('ведить текст, якщо там є слова безкоштовно або гарантія, я напишу вам про ймовірність спаму');
+if (~str.indexOf("безкоштовно")||~str.indexOf("гарантія")){
+    alert('це спам!');
+} else {
+    alert('не спам')
+}*/
+
+let str = prompt ('ведить рядок');
+let first = str.charAt(0).toUpperCase();
+document.write(first + str.slice(1))
+    
+
+    </script>
+</body>
+</html>
