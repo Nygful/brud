@@ -4,33 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-    #train {
-      position: relative;
-      cursor: pointer;
-    }
-  </style>
+  
 
 </head>
 <body>
-    <canvas id="myCanvas" width="1000px" height="1000px"></canvas>
+  <canvas id="myCanvas" width="2000px" height="2000px"
+  
+  style="border:1px solid #d3d3d3">
+  Your browser does not support the HTML5 canvas tag.></canvas>
 <body>
-  <img id="train" src="train.gif">2
-  <script>
-</script>
+ 
+  
 </body>
 
     <script>
-        let canvas = document.getElementById('my Canvas');
-        let cxt = canvas.getContext("2d");
-let context = canvas.getContext("2d");
-context.beginPath();
-context.moveTo(169, 190);
-context.quadracticCurveTo(280, 10, 308, 159)
-context.lineWidth = 10;
+      
 
-context.strokeStyle = "black";
-context.stroke();
+   /*let canvas = document.getElementById("myCanvas"), 
+                cxt = canvas.getContext("2d");
+            cxt.strokeStyle = "red";
+            cxt.setLineDash([15,5]);
+            cxt.strokeRect(40, 40, 100, 100);
+            cxt.strokeStyle = "blue";
+            cxt.setLineDash([2,5,6]);
+            cxt.strokeRect(180, 40, 100, 100);
+            cxt.strokeStyle = "green";
+            cxt.setLineDash([2,2]);
+            cxt.strokeRect(320, 40, 100, 100);*/
+
+            let c = document.getElementById("myCanvas"), 
+                cxt = c.getContext("2d");
+                let rect = +prompt('Ведіть кількість квадратів', 10);
+                let x;
+                let y;
+                let a;
+     cxt.flilStyle = "#00ff00";
+                  cxt.lineWidth = 6
+                  cxt.lineJoin ="round"
+
+                for (let count = 0; count < rect; count++){
+                  x = Math.floor(Math.random()*1200);
+
+                  y = Math.floor(Math.random()* 1200);
+
+                  a = Math.floor(50 + Math.random() *150);
+
+                
+                  cxt.strokeRect(x, y, a, a)
+                  cxt.fillRect(x, y, a, a);
+                }
+
+       
+
+            
+
+     
   /*  let numbers = ["Нуль", "Один", "Два"];
 alert(numbers [0] ); // Нуль
 alert(numbers [1] ); // Один
@@ -159,12 +187,7 @@ let min = +prompt('ведить минемальне число',"0")
  }*/
 
 
- let factorial=1
-let n=+prompt("n",'')
-for(i=1;i<=n;i++){
-    factorial=factorial*i
-}
-alert(factorial)
+ 
 
 
 
@@ -176,21 +199,7 @@ alert(factorial)
 
 
 
-train.onclick = function() {
-     let start = Date.now(); // зберегти час початку
-	let timer = setInterval(function() {
-        // обчислити скільки часу пройшло з opts.duration
-        let timePassed = Date.now() - start;
-        train.style.left = timePassed / 5 + 'px';
-        if (timePassed > 2000) clearInterval(timer);
-      }, 20);
-    }
-    let capitalEntries = Object.entries()(capitals);
-        capitalEntries.sort((a,b) => a [0].localeCompare(b[0]));
-        let htmlStringTable1 = '<table><tr><th>Формуматування</th><th>Столиці</th></tr>';
-            for (let entry of capitalEntries){
-                htmlStringTable1 += `<tr><td>`
-            }
+
     </script>
 </body>
 </html>
