@@ -1,80 +1,186 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        body{
-            background-color: blue;
-            color: aqua;
-        }
-    </style>
-</head>
-<body>
-  <script>
-    /*let count=0;
-while (count < 4) {
-  alert(count);
-  count++;
-}
-let i = 4;
-while (i) { // коли i стане = 0 , значення в дужках стане false і цикл зупиниться  
-alert( i );
-  i--;
-}
-let i = 4;
-while (i) { // коли i стане = 0 , значення в дужках стане false і цикл зупиниться  
-alert( i );
-  i++;
-}
-let i = -4;
-while (i) { // коли i стане = 0 , значення в дужках стане false і цикл зупиниться  
-alert( i );
-  i--;
-}
-let count=0;
-do {
-  alert(count);
-  count++;
-} while (count < 4);
-
-for (let count  = 0; count < 4; count++){
-  document.writeln(count);
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+  <title>Document</title>
+  </head>
+  <style>
+html {
+  box-sizing: border-box;
+  height: 100%;
 }
 
-  
- let min = +prompt('ведить минемальне число',"0")
- let max = +prompt('ведить максимальне число',"100")
- for(let i=min;i<=max; i++ ){
-    if(i%2==0)
-    document.write(i)
- }
- let min = +prompt('ведить минемальне число',"0")
- let max = +prompt('ведить максимальне число',"100")
- let sum=0
- for(let i=min;i<=max; i++ ){
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Pangolin', cursive;
+  font-size: 16px;
+  line-height: 1.2;
+  height: 100%;
+  background-image: url(num3.jpeg);
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.canvas {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-image: url(num3.jpeg);
+  width: 600px;
+  height: 400px;
+  border: 1px solid #626262;
+  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.desc__title {
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 15px;
+  color: hwb(261 21% 13%);
+  font-family: 'Pangolin', cursive;
+}
+
+.desc__subtitle {
+  color: hwb(294 4% 24%);
+}
+
+.filed__form__label {
+  color: hsl(2, 75%, 45%);
+  margin-right: 10px;
+}
+
+.field__form__input {
+  padding: 10px;
+  width: 150px;
+  margin-right: 10px;
+  border: 1px solid  #000000;
+  border-radius: 10px;
+  background-color: hwb(319 76% 17%);
+}
+.result__help, .result__count, .result__check{
+  color: hsl(2, 74%, 27%);
+}
+.field__form__btn {
+  padding: 10px;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  background-color: #d3c3c3;
+  font-family:'Pangolin', cursive; 
+}
+  </style>
+  <body>
+    <div class="container">
+      <div class="canvas">
+        <div class="desc">
+          <h1 class="desc__title">Вгадай число</h1>
+          <p class="desc__subtitle">
+            Компютер загадав число від 0 до 100. Ваша задача відгадати його.
+          </p>
+        </div>
+        <div class="field">
+          <label for="" class="filed__form__label">Ваше число: </label>
+          <input type="text" class="field__form__input" onkeypress='validate(event)'/>
+          <button class="field__form__btn">Перевірити</button>
+        </div>
+        <div class="result">
+          <div class="result__check">
+            <span class="result__check__label">Результат:</span>
+            <span class="result__check__out"></span>
+          </div>
+          <div class="result__help">
+            <span class="result__help">Підказка:</span>
+            <span class="result__help__out"></span>
+          </div>
+          <div class="result__count">
+            <span class="result__count__label">Кількість спроб:</span>
+            <span class="result__count__out"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+let input = document.querySelector(".field__form__input");
+let btn = document.querySelector(".field__form__btn");
+let check = document.querySelector(".result__check__out");
+let help = document.querySelector(".result__help__out");
+let count = document.querySelector(".result__count__out");
+
+let item = 0;
+let randNum = 1 + Math.floor(Math.random() * 100);
+let userNum
+
+btn.onclick = function (evt) {
+  evt.preventDefault();
+
+  userNum = parseInt(input.value);
+  if (isNaN(userNum)) {
+    check.textContent = "Введіть ціле число"
+  } else {
+    checkNumber();
+  }
     
-    sum=sum+i;
- }
-document.write(`сума чисел в діапазоні від ${min} до ${max} буде ${sum}`)
-
-let min = +prompt('ведить минемальне число',"0")
- let max = +prompt('ведить максимальне число',"100")
- 
- for(let i=min;i<=max; i++ ){
-    
- document.write(`&#${i};`)   
- }*/
-
-
- let factorial=1
-let n=+prompt("n",'')
-for(i=1;i<=n;i++){
-    factorial=factorial*i
 }
-alert(factorial)
 
-  </script>  
-</body>
+
+function checkNumber() {
+  if (userNum > randNum) {
+    check.textContent = "Поки не вгадали";
+    help.textContent = "забагато";
+    item++;
+    count.textContent = item;
+  } else if (userNum < randNum) {
+    check.textContent = "поки не вгадалт";
+    help.textContent = "замало";
+    item++;
+    count.textContent = item;
+  } else {
+    check.textContent = "Вітаю! Ви вгадали";
+    help.textContent = "Точно";
+    item++;
+    count.textContent = item;
+  }
+}
+
+function validate(evt) {
+  var theEvent = evt || window.event;
+
+  // Handle paste
+  if (theEvent.type === 'paste') {
+      key = event.clipboardData.getData('text/plain');
+  } else {
+  // Handle key press
+      var key = theEvent.keyCode || theEvent.which;
+      key = String.fromCharCode(key);
+  }
+  var regex = /[0-9]/;
+  if( !regex.test(key) ) {
+    theEvent.returnValue = false;
+    if(theEvent.preventDefault) theEvent.preventDefault();
+  }
+}
+    </script>
+  </body>
 </html>
+
