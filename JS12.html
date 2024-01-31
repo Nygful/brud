@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/JS12.css">
 </head>
 <body>
     <script>
@@ -102,21 +103,29 @@ code = +code; // ..якщо нам необохідне саме число то
 alert( code + ": " + value ); // 38, 44, 1 у всіх браузерах
  }
 let totalsalary = Object.values(salaries).reduce((acc, val)=> acc + val, 0);
-document.write(totalsalary);*/
+document.write(totalsalary);
 
 
  function isEmpty(obj){
-    if (Object.keys(obj).lenght === 0){
-        alert('об`єкт пустий. isEmpty повертає true.')
-        return true;
-    } else{
-        alert('об`єкт пустий. isEmpty повертає false.')
-        return false;
-    }}
-    let schedule ={};
-    alert( isEmpty(schedule));
+  for(let key in obj){
+    return false;
+  }
+  return true;
+ }
+ let schedule={}
+   alert(isEmpty(schedule));
     schedule['8:30']='прокидаємось';
-    alert( isEmpty(schedule));
+    alert(isEmpty(schedule));*/
+    let salaries ={
+      'Василь': 10000,
+      'Петро':30000,
+      'Дарина':25000
+    };
+    let totalSalary = 0;
+    for(let employee in salaries){
+      totalSalary += salaries[employee];
+    }
+  alert(totalSalary);
     </script>
 </body>
 </html>
